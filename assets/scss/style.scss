@@ -475,14 +475,14 @@
       }
       html {
         overflow-y: scroll;
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        color: #637588;
+        font-family: $font-main;
+        font-size: $font-size;
+        color: $color-gray;
         letter-spacing: 0.1em;
       }
       
       h1{
-        font-family: "Roboto Slab", serif;
+        font-family: $font-header;
         font-size: 3.75rem;
         font-weight: 300;
         letter-spacing: 0.078em;
@@ -491,7 +491,7 @@
       
       a{
       text-decoration: none;
-      color: #ffffff;
+      color: $color-light;
       }
       
      
@@ -500,19 +500,19 @@
       
       
       .header{
-        background-color: #2d3651 ;
+        background-color: $color-primary;
         background-image: url(../img/img-header.png) ;
         background-position: 50% 50%;
         background-size: cover;
         min-height: 100vh;
         position: relative;
-        color: #ffffff;
+        color: $color-light;
         padding: 100px 0;
         display: grid;
         align-items: center;
       }
       .header-overlay{
-        background-color: #2d3651 ;
+        background-color: $color-primary ;
         opacity: 0.8;
         position: absolute;
         top: 0;
@@ -540,13 +540,13 @@
       }
       
       .header-logo__link{
-      padding: 20px 20px 20px 0;
+      padding: $gap $gap $gap 0;
       display: block;
       }
       
       .header-logo__accent{
         display: inline-block;
-      border: 3px solid #d53d27;
+      border: 3px solid $color-highlight;
       padding: 14px 1px 13px 5px;
       margin-right: 4px;
       }
@@ -558,7 +558,7 @@
       .header-navbar__list{
         list-style: none;
         padding: 0;
-        margin: 0 -20px 0 0;
+        margin: 0 (-$gap) 0 0;
       
         font-size: 1.125rem;
         display: grid;
@@ -567,7 +567,7 @@
       }
       
       .header-navbar__item{
-        padding: 20px;
+        padding: $gap;
       }
       
       
@@ -577,15 +577,15 @@
       }
       
       .header-navbar_link:hover {
-        color: #D66926;
+        color: $color-accent;
       }
       
       .header-menu__container,
       .header-content__container {
-      max-width: 1340px;
+      max-width: $ul;
       margin: auto;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: $gap;
+      padding-left: $gap;
       
       }
       
@@ -602,7 +602,7 @@
       }
       
       .header-content__buttons .btn:first-of-type{
-        margin-right: 20px;
+        margin-right: $gap;
       }
       
       .skills{
@@ -617,7 +617,7 @@
       }
       
       .skill-item{
-        background-color: #2d3651;
+        background-color: $color-primary;
       min-height:calc(33.333vh - 13.333px);
       position: relative;
       overflow: hidden;
@@ -660,7 +660,7 @@
       }
       
       .skill-item__overlay{
-      background-color: #2d3651;
+      background-color: $color-primary;
       opacity: 0.8;
       position: absolute;
       top: 0;
@@ -697,7 +697,7 @@
       display: flex;
       width: 100%;
       height: 100%;
-      padding: 20px;
+      padding: $gap;
       justify-content: center;
       align-items: center;
       font-size: 1.25rem;
@@ -705,7 +705,7 @@
       transition: color 0.5s;
       }
       .skills__button{
-        padding-top: 20px;
+        padding-top: $gap;
         display: flex;
         justify-content: center;
       }
@@ -719,7 +719,7 @@
       }
       
       .skill-item:hover .skill-item__link {
-        color: #d66926;
+        color: $color-accent;
       }
 
       .btn,
@@ -727,7 +727,7 @@
         display: block;
       
         height: 60px;
-        padding: 18px 20px;
+        padding: 18px $gap;
         -webkit-transition: background-color 0.5s, border-color 0.5s;
         -o-transition: background-color 0.5s, border-color 0.5s;
         transition: background-color 0.5s, border-color 0.5s;
@@ -741,35 +741,35 @@
       }
       
 .btn {
-  border-color: #ffffff;
+  border-color: $color-light;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn {
   min-width: 250px;
-  border:  2px solid #ffffff;
-  background-color: rgba(#ffffff,0.1);
+  border:  2px solid $color-light;
+  background-color: rgba($color-light,0.1);
 
  &-accent
   {
     background-color: rgba(45, 54, 81, 0.8);
-    border: 2px solid #2d3651;
+    border: 2px solid $color-primary;
     min-width: 350px;
   }
 
   &:hover,
   &:focus{
-  background-color: #d66926;
+  background-color: $color-accent;
   }
 
   &:hover,
   &:focus{
-  background-color: #d66926;
+  background-color: $color-accent;
   }
 }
       
     
-      @media (max-width: 992px){
+      @media (max-width: $lg){
       h1{
           font-size: 40px ;
       }
@@ -784,7 +784,7 @@
           }
       }
 
-      @media (max-width: 768px){
+      @media (max-width: $md){
         h1{
             font-size: 30px ;
         }
@@ -798,18 +798,18 @@
           }
       }
 
-      @media (max-width: 576px){
+      @media (max-width: $sm){
         .btn-accent{
             min-width: auto;
             width: 100%;
         }
         .skills{
-            padding: 20px ;
+            padding: $gap ;
           }
         .skills__container{
             grid-template-columns: 1fr;
             grid-template-areas: "a1" "a2" "a3" "a4" " a5" "a6" "a7" "a8" "a9";
-            grid-gap: 20px;
+            grid-gap: $gap;
           }
 
           
