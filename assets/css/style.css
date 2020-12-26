@@ -564,9 +564,7 @@ mark {
   color: #000000;
   background-color: #ffff00;
 }
-small {
-  font-size: 80%;
-}
+
 sub,
 sup {
   position: relative;
@@ -609,6 +607,9 @@ textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
+}
+small {
+  font-size: 80%;
 }
 button {
   overflow: visible;
