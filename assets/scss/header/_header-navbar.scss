@@ -3,15 +3,16 @@
 .header-navbar {
     position: relative;
   
-    display: grid;
+   
     align-items: center;
   
     letter-spacing: 0.1em;
   
     justify-items: end;
-  
-
-    
+   @include md{
+    display: flex;
+    justify-content: flex-end;
+   }
     &__list {
       @include unlist(0 (-$gap) 0 0);
       @include md-min {
@@ -33,6 +34,12 @@
   
         background-color: rgba($color-gray-dark, 0.9);
       }
+    &--active {
+      display: block !important;
+
+      background-color: red;
+    }
+      
     }
   
     &__btn {
@@ -49,10 +56,16 @@
       width: 30px;
     height: 22.5px;
     position: relative;
-    margin: 22.5px auto;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
     cursor: pointer;
+
+    @include md-min{
+      display: none;
+    }
+    @include md{
+      display: block;
+    }
   
     &-row{
 
